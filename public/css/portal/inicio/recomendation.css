@@ -1,0 +1,183 @@
+.recomendation {
+    height: 100%;
+    overflow: hidden;
+    background-image: url("../../../img/portal/inicio/bg_recomendation.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.recomendation .fullscreen {
+    height: 100%;
+}
+.recomendation .fullscreen main {
+    height: 100%;
+    padding: 80px 0 10px 0;
+}
+.recomendation .fullscreen main header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recomendation .fullscreen main header h1 {
+    color: var(--color_red);
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.recomendation .slider_recomendation {
+    height: calc(100% - 40px);
+    padding: 20px 0;
+    /* background: rgba(255,255,255,.3); */
+}
+.recomendation .swiper-container {
+    /* background: rgba(255,0,255,.3); */
+    height: 100%;
+    padding: 0 30px;
+    /* padding-top: 15vh; */
+    padding-bottom: 5vh;
+}
+.recomendation .swiper-container .swiper-wrapper {
+    /* background: rgba(255,255,255,.3); */
+}
+.recomendation .swiper-container .swiper-button-prev,
+.recomendation .swiper-container .swiper-button-next {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recomendation .swiper-container .swiper-button-prev {
+    left: 0;
+}
+.recomendation .swiper-container .swiper-button-next {
+    right: 0;
+}
+.recomendation .swiper-container .swiper-button-prev .icon,
+.recomendation .swiper-container .swiper-button-next .icon {
+    width: 30px;
+    height: 30px;
+    opacity: .5;
+}
+.recomendation .swiper-container .swiper-button-prev.swiper-button-disabled,
+.recomendation .swiper-container .swiper-button-next.swiper-button-disabled {
+    opacity: 0.1;
+}
+.recomendation .swiper-container .swiper-button-prev .icon {
+    transform: rotate(90deg);
+}
+.recomendation .swiper-container .swiper-button-next .icon {
+    transform: rotate(-90deg);
+}
+.recomendation .swiper-container .swiper-button-prev .icon svg polygon,
+.recomendation .swiper-container .swiper-button-next .icon svg polygon {
+    fill: var(--color_txt_light);
+}
+.recomendation .swiper-wrapper .swiper-slide {
+    color: var(--color_txt_light);
+}
+.recomendation .cocktail {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    padding-top: 60px;
+    transition: padding-top ease-out .3s;
+}
+.recomendation .cocktail .header_cocktail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: rgba(255,255,255,.3); */
+}
+.recomendation .cocktail .header_cocktail header {
+    min-height: 30px;
+    height: initial;
+}
+.recomendation .cocktail .header_cocktail header h2 {
+    font-size: 22px;
+    text-align: center;
+}
+.recomendation .cocktail .header_cocktail footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.recomendation .cocktail .header_cocktail footer a {
+    display: block;
+    height: 30px;
+    font-size: 16px;
+    background: var(--color_red_light);
+    color: var(--color_red);
+    padding: 5px 20px;
+    text-transform: uppercase;
+    transition: background ease-out .3s, opacity ease-in .3s;
+    opacity: 0;
+}
+.recomendation .cocktail .header_cocktail footer a:hover {
+    background: var(--color_red);
+    color: var(--color_txt_light);
+}
+.recomendation .cocktail figure {
+    height: 100%;
+    width: 150px;
+    /* background: rgba(255,255,255,.3); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .3s;
+}
+.recomendation .cocktail figure img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.recomendation .cocktail:hover .header_cocktail footer a {
+    opacity: 1;
+}
+.recomendation .cocktail:hover {
+    padding-top: 10px;
+}
+.recomendation .cocktail:hover figure {
+    width: 180px;
+}
+
+@media only screen and (min-width: 480px) {
+    .recomendation .swiper-container {
+        padding-top: 5vh;
+        padding-bottom: 10vh;
+    }
+    .recomendation .cocktail:hover figure {
+        width: 200px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .recomendation .fullscreen main {
+        padding: 100px 0 10px 0;
+    }
+    .recomendation .fullscreen main header h1 {
+        font-size: 30px;
+    }
+    .recomendation .swiper-container {
+        /* padding-top: 10vh; */
+    }
+    .recomendation .cocktail .header_cocktail header h2 {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 960px) {
+    .recomendation .fullscreen main {
+        padding: 120px 0 10px 0;
+    }
+    .recomendation .fullscreen main header h1 {
+        font-size: 34px;
+    }
+    .recomendation .swiper-container {
+        padding-top: 10vh;
+        /* padding-bottom: 15vh; */
+    }
+    .recomendation .cocktail .header_cocktail header h2 {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,10 @@
+@import url("../../all/general.css");
+@import url("../all/header.css");
+@import url("../all/footer.css");
+@import url("cover.css");
+@import url("recomendation.css");
+
+.cover,
+.recomendation {
+    padding: 10px;
+}

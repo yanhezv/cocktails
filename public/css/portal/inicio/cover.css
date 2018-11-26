@@ -1,0 +1,108 @@
+.cover {
+    /* display: none; */
+    height: 100%;
+    overflow: hidden;
+    background-image: url("../../../video/snapshot/pour.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.cover video {
+    width: 100%;
+}
+.cover .fullscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cover .message {
+    max-width: 330px;
+    font-size: 26px;
+    z-index: 1;
+}
+.cover .message h1,
+.cover .message h3 {
+    text-align: center;
+}
+.cover .message h1 {
+    font-size: 1em;
+    color: var(--color_txt_light);
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.cover .message h3 {
+    font-size: 0.6em;
+    color: var(--color_red);
+}
+.cover .message::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+}
+.cover .message h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: var(--color_red);
+    position: absolute;
+    top: 100%;
+    left: 25%;
+}
+.cover .next_section {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: calc(50% - 25px);
+    bottom: 10px;
+    z-index: 1;
+}
+.cover .next_section .icon {
+    display: block;
+    padding: 10px;
+    opacity: .3;
+    transition: opacity ease-out .3s;
+}
+.cover .next_section .icon svg polygon {
+    fill: var(--color_txt_light);
+}
+.cover .next_section:hover .icon {
+    display: block;
+    padding: 10px;
+    opacity: .8;
+}
+@media only screen and (min-width: 480px) {
+    .cover .message {
+        max-width: 380px;
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .cover .message {
+        max-width: 420px;
+        font-size: 33px;
+    }
+}
+@media only screen and (min-width: 960px) {
+    .cover .message {
+        max-width: 550px;
+        font-size: 44px;
+    }
+    .cover .message h3 {
+        font-size: 0.5em;
+    }
+}
